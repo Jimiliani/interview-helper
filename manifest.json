@@ -23,9 +23,6 @@
     "desktopCapture",
     "webRequest"
   ],
-  "background": {
-    "service_worker": "popup/background.js"
-  },
   "content_scripts": [
     {
       "matches": [
@@ -36,6 +33,11 @@
       ]
     }
   ],
+  "externally_connectable": {
+    "matches": [
+      "*://github.com/*"
+    ]
+  },
   "action": {
     "default_popup": "hello.html",
     "default_icon": "images/hello_image.png"
